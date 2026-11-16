@@ -1,0 +1,242 @@
+ /* Custom Pixel Art Styling */
+* {
+      image-rendering: pixelated;
+      user-select: none;
+    }
+
+    body {
+      font-family: 'VT323', monospace;
+      font-size: 1.25rem;
+      transition: background-color 0.5s ease, color 0.5s ease;
+      overflow-x: hidden;
+    }
+
+    /* Céu de Dia e Noite no Body */
+    html.day-theme body {
+      background-color: #70b9f0;
+      background-image: linear-gradient(180deg, #5ba4e0 0%, #89c8f7 100%);
+    }
+
+    html.night-theme body {
+      background-color: #0d1633;
+      background-image: linear-gradient(180deg, #070b1e 0%, #162447 100%);  
+    }
+
+    /* Contraste do Cartão de Inspeção de Item no Tema Dia */
+    html.day-theme #item-tooltip {
+      background-color: rgba(212, 163, 106, 0.35);
+    }
+
+    html.day-theme #item-name {
+      color: #4a2505;
+    }
+
+    html.day-theme #item-quality {
+      color: #7c3f0c;
+      font-weight: bold;
+    }
+
+    /* Cabeçalho no Tema Noite */
+    html.night-theme header.stardew-box {
+      background-color: #2c223b;
+      border-color: #120e1c;
+      box-shadow: inset -4px -4px 0px 0px #181224, inset 4px 4px 0px 0px #46375e, 4px 4px 0px 0px rgba(0, 0, 0, 0.5);
+    }
+
+    /* Botões de áudio no Tema Noite para combinarem com o cabeçalho */
+    html.night-theme #sound-btn,
+    html.night-theme #audio-toggle {
+      background-color: #1f182b;
+      border-color: #5c4b78;
+    }
+
+    html.night-theme #sound-btn:hover,
+    html.night-theme #audio-toggle:hover {
+      background-color: #362a4a;
+    }
+
+    /* Stardew Frame Style */
+    .stardew-box {
+      border: 4px solid #4a2505;
+      box-shadow: inset -4px -4px 0px 0px #8b4513, inset 4px 4px 0px 0px #f4a460, 4px 4px 0px 0px rgba(0,0,0,0.3);
+      position: relative;
+    }
+
+    .day-theme .stardew-box-main {
+      background-color: #ffebc2;
+      border-color: #5c2c06;
+      color: #381c03;
+    }
+
+    .night-theme .stardew-box-main {
+      background-color: #272138;
+      border-color: #120e1c;
+      color: #e0d7f5;
+      box-shadow: inset -4px -4px 0px 0px #181224, inset 4px 4px 0px 0px #3d3356, 4px 4px 0px 0px rgba(0,0,0,0.5);
+    }
+
+    .audio-btn:hover {
+      background-color: #ffd98e;
+    }
+
+    .audio-btn:active {
+      transform: translateY(3px);
+      box-shadow: 0 1px 0 #3d1c08;
+    }
+
+    .inv-slot i,
+    #item-icon i {
+      filter: drop-shadow(2px 2px 0px rgba(0, 0, 0, 0.65));
+      transition: transform 0.15s ease;
+    }
+
+    .inv-slot:hover i {
+      transform: scale(1.12);
+    }
+
+    /* Adaptação para o Tema Noite (Dark Mode) */
+    body.dark-theme .audio-btn {
+      background-color: #2b2d42;
+      color: #edf2f4;
+      border-color: #8d99ae;
+      box-shadow: 0 4px 0 #1a1b29;
+    }
+
+    body.dark-theme .audio-btn:hover {
+      background-color: #3a3d59;
+    }
+
+    /* Button Pixel Styling */
+    .stardew-btn {
+      border: 3px solid #3d1e03;
+      box-shadow: inset -2px -2px 0px #854005, inset 2px 2px 0px #ffc382;
+      background: linear-gradient(180deg, #e08b38 0%, #b85c14 100%);
+      color: #fff;
+      text-shadow: 1px 1px 0px #000;
+      transition: transform 0.05s, filter 0.2s;
+      cursor: pointer;
+    }
+    .stardew-btn:hover {
+      filter: brightness(1.1);
+    }
+    .stardew-btn:active {
+      transform: translate(2px, 2px);
+      box-shadow: inset 2px 2px 0px #502502;
+    }
+    .stardew-btn.active-tab {
+      background: linear-gradient(180deg, #ffd700 0%, #cc9900 100%);
+      color: #3b2200;
+      text-shadow: none;
+      box-shadow: inset -2px -2px 0px #8b6d00, inset 2px 2px 0px #fff2a3;
+    }
+
+    /* Inventory Slot */
+    .inv-slot {
+      background: #8c572b;
+      border: 3px solid #4a2b11;
+      box-shadow: inset 2px 2px 4px rgba(0,0,0,0.6), inset -1px -1px 2px rgba(255,255,255,0.2);
+    }
+    .inv-slot:hover {
+      border-color: #ffd700;
+      cursor: pointer;
+    }
+
+    /* Floating Canvas background effects */
+    #bg-canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    /* Pixelated Scrollbar */
+    ::-webkit-scrollbar {
+      width: 12px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #4a2505;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #e69d52;
+      border: 2px solid #4a2505;
+    }
+
+    /* Floating particles / heart animations */
+    @keyframes floatUp {
+      0% { transform: translateY(0) scale(1); opacity: 1; }
+      100% { transform: translateY(-40px) scale(1.3); opacity: 0; }
+    }
+    .particle-heart {
+      position: absolute;
+      animation: floatUp 0.8s ease-out forwards;
+      pointer-events: none;
+      font-size: 16px;
+    }
+
+    /* REFINAMENTO DO TEMA NOITE (BOTÕES, BORDAS E DESTAQUES) */
+
+    /* Suaviza as bordas internas (chanfros) das caixas dentro do painel à noite */
+    html.night-theme .stardew-box-main .stardew-box {
+      background-color: rgba(18, 14, 28, 0.45);
+      border-color: #141021;
+      box-shadow: inset -3px -3px 0px 0px #151024, inset 3px 3px 0px 0px #3f335c, 3px 3px 0px 0px rgba(0, 0, 0, 0.4);
+    }
+
+    /* Botões (Abas e Toggle de Tema) em tom azul-noite / ametista */
+    html.night-theme .stardew-btn {
+      border-color: #120e1c;
+      background: linear-gradient(180deg, #433663 0%, #2b2242 100%);
+      box-shadow: inset -2px -2px 0px #1b142b, inset 2px 2px 0px #65538f;
+      color: #e0d7f5;
+    }
+
+    html.night-theme .stardew-btn:hover {
+      background: linear-gradient(180deg, #524278 0%, #352a52 100%);
+    }
+
+    /* Aba Ativa em tom de Ouro Lunar / Âmbar Escuro (menos gritante) */
+    html.night-theme .stardew-btn.active-tab {
+      background: linear-gradient(180deg, #c9972c 0%, #8f6314 100%);
+      box-shadow: inset -2px -2px 0px #573a08, inset 2px 2px 0px #ebd07a;
+      color: #fff8e7;
+      text-shadow: 1px 1px 0px #3b2502;
+    }
+
+    /* Moldura do avatar e fundos das barras de progresso à noite */
+    html.night-theme #section-journal .bg-amber-300 {
+      background-color: #3a2d54;
+      border-color: #181224;
+    }
+
+    html.night-theme .bg-amber-950\/40 {
+      background-color: rgba(10, 8, 18, 0.7);
+      border-color: #3a2d54;
+    }
+
+    /* Slots do Inventário no Tema Noite */
+    html.night-theme .inv-slot {
+      background: #1d172b;
+      border-color: #100c1a;
+      box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.75), inset -1px -1px 2px rgba(139, 118, 184, 0.15);
+    }
+
+    html.night-theme .inv-slot:hover {
+      border-color: #ebd07a;
+      background: #261e38;
+    }
+
+    /* Campos de texto do Correio no Tema Noite */
+    html.night-theme #contact-form input,
+    html.night-theme #contact-form textarea {
+      background-color: #141021;
+      border-color: #433663;
+      color: #e0d7f5;
+    }
+
+    html.night-theme #contact-form input:focus,
+    html.night-theme #contact-form textarea:focus {
+      border-color: #ebd07a;
+    }
