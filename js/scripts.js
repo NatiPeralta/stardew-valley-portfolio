@@ -381,6 +381,13 @@ document.addEventListener('DOMContentLoaded', () => {
       }, 800);
     }
 
+    document.addEventListener('DOMContentLoaded', () => {
+      const junimoBtn = document.getElementById('junimo-btn');
+      if (junimoBtn) {
+        junimoBtn.addEventListener('click', triggerJunimoHeart);
+      }
+    });
+
     /* Dynamic Canvas Floating Fireflies & Clouds */
     const canvas = document.getElementById('bg-canvas');
     const ctx = canvas.getContext('2d');
