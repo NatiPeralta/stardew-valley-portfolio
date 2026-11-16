@@ -178,7 +178,6 @@
     }
 
     /* REFINAMENTO DO TEMA NOITE (BOTÕES, BORDAS E DESTAQUES) */
-
     /* Suaviza as bordas internas (chanfros) das caixas dentro do painel à noite */
     html.night-theme .stardew-box-main .stardew-box {
       background-color: rgba(18, 14, 28, 0.45);
@@ -240,4 +239,17 @@
     html.night-theme #contact-form input:focus,
     html.night-theme #contact-form textarea:focus {
       border-color: #ebd07a;
+    }
+
+    /* Destaque da Borda Tracejada (Missões em Progresso) */
+    html.night-theme .stardew-box-main .stardew-box.border-dashed {
+      border-style: dashed;
+      border-color: #65538f;
+      box-shadow: 3px 3px 0px 0px rgba(0, 0, 0, 0.4);
+    }
+
+    html.day-theme .stardew-box-main .stardew-box.border-dashed {
+      border-style: dashed;
+      border-color: #8b4513;
+      box-shadow: 3px 3px 0px 0px rgba(0, 0, 0, 0.2);
     }
