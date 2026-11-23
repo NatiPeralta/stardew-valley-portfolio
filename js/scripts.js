@@ -271,6 +271,24 @@ document.addEventListener('DOMContentLoaded', () => {
         quality: 'Qualidade: Estrela de Ouro ⭐️',
         desc: 'Ferramenta de cartografia para desenhar mapas de telas e protótipos impecáveis.',
         icon: '<i class="devicon-figma-plain colored"></i>'
+      },
+      java: {
+        name: 'Java',
+        quality: 'Qualidade: Estrela de Ouro ⭐️',
+        desc: 'Espada forjada nas profundezas da orientação a objetos. Garante tipagem forte e estabilidade no servidor.',
+        icon: '<i class="devicon-java-plain colored"></i>'
+      },
+      spring: {
+        name: 'Spring Boot',
+        quality: 'Qualidade: Normal ⚪',
+        desc: 'Forja mágica que acelera a criação de APIs REST, rotas seguras e microsserviços escaláveis.',
+        icon: '<i class="devicon-spring-original colored"></i>'
+      },
+      mysql: {
+        name: 'MySQL',
+        quality: 'Qualidade: Estrela de Ouro ⭐️',
+        desc: 'Silo subterrâneo de alta precisão para armazenar, relacionar e consultar todos os dados da vila.',
+        icon: '<i class="devicon-mysql-original colored"></i>'
       }
     };
 
