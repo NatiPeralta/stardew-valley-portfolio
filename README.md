@@ -44,7 +44,7 @@ Um portfólio interativo e temático inspirado na estética **pixel art**, palet
 ## 👩‍💻 Autora
 
 Nati Peralta
-Desenvolvedora Front-end
+Desenvolvedora Full Stack
 
     GitHub: @NatiPeralta
 
